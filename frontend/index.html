@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroScan | AI Tumor Detection</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="glass-container">
+        <header>
+            <div class="logo">🧠</div>
+            <h1>NeuroScan <span>AI</span></h1>
+            <p class="subtitle">Advanced Brain Tumor Analysis</p>
+        </header>
+
+        <div class="upload-section" id="dropZone">
+            <div class="upload-icon">📁</div>
+            <p>Drag & drop MRI scan or <span>Browse</span></p>
+            <input type="file" id="imageInput" accept="image/*" hidden />
+        </div>
+
+        <button type="button" onclick="predictImage()" id="predictBtn">Run Analysis</button>
+
+        <div id="loading" class="loader-container" style="display:none;">
+            <div class="spinner"></div>
+            <p>Scanning Neural Patterns...</p>
+        </div>
+
+        <div id="result"></div>
+    </div>
+    <div class="health-advisory">
+    <div id="disclaimerModal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span>⚠</span> Important Medical Disclaimer
+        </div>
+        <div class="modal-body">
+            <p>This AI-powered Brain Tumor Detection tool is for <strong>educational and research purposes only</strong>.</p>
+            <ul>
+                <li>It is NOT a substitute for professional medical diagnosis.</li>
+                <li>The results provided are preliminary and may contain errors.</li>
+                <li>Always consult with a licensed Neurologist or Healthcare provider.</li>
+                <li>By clicking "I Understand", you acknowledge that this tool is not for clinical decision-making.</li>
+            </ul>
+        </div>
+        <button id="closeModalBtn" class="modal-btn">I Understand & Agree</button>
+    </div>
+</div>
+</div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
